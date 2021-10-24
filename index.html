@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>程序猿们，节日快乐！</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-container dark-theme">
+    <div class="card">
+      <p>1024</p>
+      <button class="btn">别再掉发</button>
+    </div>
+  </div>
+  <script>
+    const btn = document.querySelector('.btn')
+    const container = document.querySelector('.app-container')
+
+    btn.addEventListener('click', () => {
+      if (/dark-theme/.test(container.className)) {
+        container.classList.remove('dark-theme')
+        return
+      }
+      container.classList.add('dark-theme')
+    })
+  </script>
+</body>
+
+</html>
